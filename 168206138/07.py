@@ -3,7 +3,7 @@ end = 'cog'
 adict = ['hot','dot','dog','lot','log']
 count = []
 count.append(start)
-def xiang(adict, a):
+def xiang(adict, a): #在 adict 中找与 a 相似差异为 1 个单位的
 	zhi = {}
 	c = []
 	for n in range(len(adict)):
@@ -13,7 +13,7 @@ def xiang(adict, a):
 			if a[n] == adict[m][n]:
 				zhi[adict[m]] += 1
 	for key,value in zhi.items():
-		if value == 2:
+		if value == len(a) - 1:
 			c.append(key)
 	return c
 
