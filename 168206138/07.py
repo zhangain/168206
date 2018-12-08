@@ -19,8 +19,6 @@ def xiang(adict, a):
 
 def zao(adict, start, end, en):	
 	st = xiang(adict, start)
-	if len(st) == 0:
-		return 
 	for n in range(len(st)):
 		if st[n] in count:
 			continue
@@ -30,10 +28,10 @@ def zao(adict, start, end, en):
 			count.append(end)
 			print(count)
 			count.remove(end)
+			count.remove(st[n])
 		else:
 			zao(adict, start, end, en)
-				
-
+			count.remove(st[n])
 en = xiang(adict, end)
 zao1 = zao(adict, start, end, en)
 print(zao1)
