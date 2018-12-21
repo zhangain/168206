@@ -7,12 +7,17 @@ D：B有意诬陷我。
 """
 St = ['A','B','C','D']
 
-print("小偷是：")
+print("小偷是：",end="")
 for s in St:
-	i = s
+	i = s  
 	A=(i != 'A')
 	B=(i == 'D')
 	C=(i == 'B')
 	D=(i != 'D')
 	if (A + B + C + D == 1):
-		print(i)
+		lists = [A,B,C,D]
+		print(i,end=" ")
+		print("\n说真话的是：",end="")
+		for i in range(len(lists)):
+			if lists[i]:
+				print(St[i],end=" ")
