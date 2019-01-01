@@ -22,5 +22,4 @@ for s in thief:
 		print("\n")
 		print("小偷是：",end="")
 		print(i)
-		
-
+#参考文献https://www.cnblogs.com/zdz8207/archive/2012/12/17/2821708.html
